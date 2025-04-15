@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "WordPress Plugin Update Helper",
+    "version": "1.0",
+    "description": "Simplifies viewing available plugin updates in WordPress",
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "permissions": ["activeTab"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*/wp-admin/update-core.php"],
+        "js": ["content.js"]
+      }
+    ]
+  }
